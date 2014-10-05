@@ -32,7 +32,7 @@ io.on('connection', function(socket){
 	console.log('a user connected');
 });
 
-var port = 5000;
+var port = Number(process.env.PORT || 5000);
 
 http.listen(port, function(){
   console.log('listening on *:%s', port);
